@@ -5,35 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsolomon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 12:35:52 by tsolomon          #+#    #+#             */
-/*   Updated: 2020/01/27 13:01:33 by tsolomon         ###   ########.fr       */
+/*   Created: 2020/01/27 15:02:10 by tsolomon          #+#    #+#             */
+/*   Updated: 2020/01/27 15:10:01 by tsolomon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <unistd.h>
 
-int		main(int argc, char, **argv)
+int			main(int argc, char **argv)
 {
 	int i;
-	W
-	int i = 0;
-	if (agrc != 2)
-	{
-		write(1, "a\n", 2);
-	}
-	else
+
+	i = 0;
+	if (argc == 2)
 	{
 		while (argv[1][i] != '\0')
 		{
-			if (arg[1][i] == 'a')
+			if (argv[1][i] == 'a') //if current(i) character is equal to the chracter 'a'
 			{
-				write(1, &argv[1][i], 1);
-				write(1, "\n", 1);
-				return (0);
+				write(1, "a", 1); //display 'a' if the above condition is met
+				break ; //to exit the while loop after after displaying 'a'
 			}
-			i++
+			i++;
 		}
 	}
+	else if (argc == 1)
+	{
+		write(1, "a", 1);
+	}
+	write(1, "\n", 1);
 	return (0);
 }
-
